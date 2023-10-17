@@ -49,15 +49,15 @@ char decryptChar(char c, int method_choice, string key1, string key2){
     else{
         if (!isupper(c) && isalpha(c)){
             if (method_choice == 1){
-                return shiftChar(c, 25);
+                return shiftChar(c, 25); // going forward 25 is the same as going back and wrapping around 1
             }
             else if (method_choice == 2){
                 int shift = getMethod2ShiftAmount(key1);
-                return shiftChar(c, 26-shift);
+                return shiftChar(c, 26-shift); // same idea here
             }
             else{
                 int shift = getMethod3ShiftAmount(key1, key2);
-                return shiftChar(c, 26-shift);
+                return shiftChar(c, 26-shift); // same idea here
             }
         }
         else{
