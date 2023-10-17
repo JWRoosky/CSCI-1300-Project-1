@@ -3,7 +3,7 @@
 using namespace std;
 
 int getMethod3ShiftAmount(string key1, string key2){
-    int counter = 0;
+    int counter = 0; // initialize counter variable
     for (int i = 0; i < key1.size(); i++){
         for (int j = 0; j < key2.size(); j++){
             if (key1[i] == key2[j]){
@@ -13,3 +13,6 @@ int getMethod3ShiftAmount(string key1, string key2){
     }
     return counter % 26;
 }
+
+// nested for loop compares each value of each string and increments counter whenever they are equivalent. returns the counter modded by 26 for a valid 
+// alphabet value
