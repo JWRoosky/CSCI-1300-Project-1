@@ -69,7 +69,7 @@ string encryptMessage(string message, int method_choice, string key1, string key
     }
     else if (method_choice == 2){
         for (int i = 0; i < message.size(); i++){
-            temp +=     shiftChar(message[i], getMethod2ShiftAmount(key1));
+            temp += shiftChar(message[i], getMethod2ShiftAmount(key1));
         }   
     }
     else if (method_choice == 3){
@@ -96,3 +96,6 @@ string encryptMessage(string message, int method_choice, string key1, string key
     }
     return temp;
 }
+
+// simply access the message character by character, compute the shifted character using the chosen method and then append it 
+// to a temp string to be returned
